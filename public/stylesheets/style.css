@@ -1,0 +1,44 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: #2374ba;
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.dyi{
+  margin-left: 50px;
+  background-color: white;
+  width:960px;
+  height:700px;
+}
+
+.datos{
+  padding: 15px;
+  background-color: #f2f2f2;
+  float: left;
+  width: 250px;
+}
+.informacion{
+  background-color: #ffff;
+  padding: 15px;
+  float: left;
+  width: 647px;
+  height: 748px;
+}
+.cara{
+  padding: 25px;
+  float: center;
+  width: 175px;
+  background-image: linear-gradient(gray,#f2f2f2,#f2f2f2);
+  border-radius: 50%;
+}
+a{
+  text-decoration:none;
+  color:#2374ba;
+}
+img{
+  padding: 3px;
+}
+h1, h2, hr{
+  color: #2374ba;
+}
