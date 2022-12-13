@@ -5,10 +5,12 @@ var cookieParser= require('cookie-parser');
 var session = require('express-session');
 var PassportLocal = require('passport-local').Strategy;
 
+require('dotenv').config();
+
 router.use(express.urlencoded({extended: true}));
-router.use(cookieParser("Un secreto"));
+router.use(cookieParser(process.env.COOKIE));
 router.use(session({
-	secret: "Un secreto",
+	secret: process.env.COOKIE,
 	resave: true,
 	saveUninitialized: true
 }));
@@ -18,7 +20,7 @@ router.use(passport.session());
 
 passport.use( new PassportLocal(function(username, password, done){
 
-	if(username === "holasoyadmin@gmail.com" && password === "holasoyadmin123")
+	if(username === process.env.USUARIO_PRIVADO && password === process.env.CLAVE_PRIVADA)
 		return done(null,{id: 1, name: "Administrador"});
 
 	done(null, false)
